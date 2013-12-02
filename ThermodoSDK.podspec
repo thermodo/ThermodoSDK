@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage            = "http://developer.thermodo.com"
   s.license             = { :type => 'MIT', :file => 'ThermodoSDK/LICENSE' }
   s.author              = { "Robocat" => "hello@robo.cat" }
-  s.source              = { :git => "https://github.com/thermodo/ThermodoSDK-iOS.git", :branch => 'master' }
+  s.source              = { :git => "https://github.com/thermodo/ThermodoSDK-iOS.git", :tag => '1.0' }
   s.platform            = :ios, '7.0'
   s.source_files		= 'ThermodoSDK/*.h'
   s.preserve_paths		= 'ThermodoSDK/*.a'
