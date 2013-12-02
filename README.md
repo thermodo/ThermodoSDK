@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://thermodo.com/assets/images/thermodo_logo.jpg" alt="Thermodo" title="Thermodo" />
+  <a href="http://developer.thermodo.com/"><img src="http://thermodo.com/assets/images/thermodo_logo.jpg" alt="Thermodo" title="Thermodo" /></a>
 </p>
 
 The ThermodoSDK allows you to integrate [Thermodo](http://thermodo.com) into your iOS or OS X application. ThermodoSDK provides a simple interface for interacting with Thermodo and getting temperature readings into your application.
@@ -23,7 +23,7 @@ pod "ThermodoSDK", "~> 1.0"
 We highly encourage you to use CocoaPods for installation so you're always up to date with the latest version. If you don't want to use CocoaPods you can of course still install ThermodoSDK manually.
 
 1. Download the lastest [zipped version](https://github.com/robocat/ThermodoSDK/archive/master.zip)
-2. Drag all the ``.h`` and ``.m`` files into your Xcode project.
+2. Drag all the ``.h`` and ``.a`` files into your Xcode project.
 3. That's it!
 
 ## Usage
@@ -83,10 +83,6 @@ To start measuring simply register your delegate and ask the ``THMThermodo`` ins
 
 In this example we simply use our View Controller as the delegate for Thermodo. While this works perfectly fine you probably want to have your delegate decoupled from your View Controllers if you need to access the Thermodo readings from several places since there can only be one delegate for the Thermodo device.
 
-## How it works
-
-Magic! And some theory with pretty picture from Marcus!
-
 ## FAQ
 
 ### Can I try/use ThermodoSDK without a Thermodo Device?
@@ -101,7 +97,7 @@ information [this video update from the Kickstarter project](http://vimeo.com/76
 
 ## Contributing
 
-We love our community and our fellow developers. If you find some other way to improve ThermodoSDK please let us know by [opening issue](https://github.com/robocat/ThermodoSDK/issues/new) or submitting a pull request.
+We love our community and our fellow developers. If you find some other way to improve ThermodoSDK please let us know by [opening issue](https://github.com/robocat/ThermodoSDK/issues/new).
 
 ## License
 
