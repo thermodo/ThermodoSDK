@@ -2,7 +2,7 @@
   <a href="http://developer.thermodo.com/"><img src="http://thermodo.com/assets/images/thermodo_logo.jpg" alt="Thermodo" title="Thermodo" /></a>
 </p>
 
-The ThermodoSDK allows you to integrate [Thermodo](http://thermodo.com) into your iOS or OS X application. ThermodoSDK provides a simple interface for interacting with Thermodo and getting temperature readings into your application.
+The ThermodoSDK allows you to integrate [Thermodo](http://thermodo.com) into your iOS application. ThermodoSDK provides a simple interface for interacting with Thermodo and getting temperature readings into your application.
 
 Thermodo is a tiny electrical thermometer for your mobile device that lets you measure the temperature right where you are. For more information about Thermodo please checkout our [website](http://thermodo.com) or watch the [Kickstarter Video](http://www.kickstarter.com/projects/robocat/thermodo-the-tiny-thermometer-for-mobile-devices).
 
@@ -35,11 +35,17 @@ To get started you need to register a delegate so your application can ``start``
 
 @optional
 
+/*!
+ * If this method is implemented, it will get called after -start has been called and
+ * whenever something is plugged into or out of the headphone jack.
+ * @param thermodo The shared THMThermodo instance
+ */
 - (BOOL)thermodoShouldUseAudioInputAsThermodoDevice:(THMThermodo *)thermodo;
 
 /*!
  * This method will be called when -start is called on TMThermodo while the device is plugged in
  * or once the device has been plugged in after -start has been called.
+ * @param thermodo The shared THMThermodo instance
  */
 - (void)thermodoDidStartMeasuring:(THMThermodo *)thermodo;
 
@@ -97,28 +103,4 @@ information [this video update from the Kickstarter project](http://vimeo.com/76
 
 ## Contributing
 
-We love our community and our fellow developers. If you find some other way to improve ThermodoSDK please let us know by [opening issue](https://github.com/robocat/ThermodoSDK/issues/new).
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2013 Robocat
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+We love our community and our fellow developers. If you find some way to improve ThermodoSDK or find a bug somewhere please let us know by [opening issue](https://github.com/robocat/ThermodoSDK/issues/new).

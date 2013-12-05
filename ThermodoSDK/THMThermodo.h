@@ -2,9 +2,8 @@
 //  THMThermodo.h
 //  ThermodoSDK
 //
-//  Created by Ulrik Damm on 23/7/13.
-//  Copyright (c) 2013 Robocat. All rights reserved.
-//
+//  Copyright (c) 2013 Robocat (http://robocatapps.com)
+//  All rights reserved.
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -15,11 +14,17 @@
 
 @optional
 
+/*!
+ * If this method is implemented, it will get called after -start has been called and
+ * whenever something is plugged into or out of the headphone jack.
+ * @param thermodo The shared THMThermodo instance
+ */
 - (BOOL)thermodoShouldUseAudioInputAsThermodoDevice:(THMThermodo *)thermodo;
 
 /*!
  * This method will be called when -start is called on TMThermodo while the device is plugged in
  * or once the device has been plugged in after -start has been called.
+ * @param thermodo The shared THMThermodo instance
  */
 - (void)thermodoDidStartMeasuring:(THMThermodo *)thermodo;
 
