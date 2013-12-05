@@ -24,7 +24,9 @@ We highly encourage you to use CocoaPods for installation so you're always up to
 
 1. Download the lastest [zipped version](https://github.com/robocat/ThermodoSDK/archive/master.zip)
 2. Drag all the ``.h`` and ``.a`` files into your Xcode project.
-3. That's it!
+3. Make sure that the location where you put the libThermodoSDK.a is in your "Library Search Path" (Under your targets build settings).
+4. Add ``-lThermodoSDK`` to "Other Linker Flags" in your targets build settings.
+5. That's it!
 
 ## Usage
 
