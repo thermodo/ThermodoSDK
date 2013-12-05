@@ -93,6 +93,10 @@ In this example we simply use our View Controller as the delegate for Thermodo. 
 
 ## FAQ
 
+### Why is it not compatible with OS X?
+
+We're hard at work at making a OS X compatible version of ThermodoSDK. All the basic functionality is there, we just need to nail the final details down.
+
 ### Can I try/use ThermodoSDK without a Thermodo Device?
 
 No. In order to get device readings and any kind of reponse from SDK you must have Thermodo device to test with. You can order one from [our website](http://thermodo.com).
