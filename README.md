@@ -30,7 +30,7 @@ We highly encourage you to use CocoaPods for installation so you're always up to
 
 ## Usage
 
-To get started you need to register a delegate so your application can ``start`` and``stop`` the measurements and get temperature readings from the device. Your delegate must implement the ``THMThermodoDelegate`` protocol. 
+To get started you need to register a delegate so your application can ``start`` and``stop`` the measurements and get temperature readings from the device. Your delegate must implement the ``THMThermodoDelegate`` protocol.
 
 ```objectivec
 @protocol THMThermodoDelegate <NSObject>
@@ -60,7 +60,7 @@ To get started you need to register a delegate so your application can ``start``
 /*!
  * This method will be called every time the Thermodo device returns a new temperature reading.
  * @param thermodo The shared THMThermodo instance
- * @param temperature The measured temperature in celcius
+ * @param temperature The measured temperature in celsius
  */
 - (void)thermodo:(THMThermodo *)thermodo didGetTemperature:(CGFloat)temperature;
 
@@ -104,7 +104,7 @@ No. In order to get device readings and any kind of reponse from SDK you must ha
 ### The readings from the device are too hot
 
 We have used a lot of time on making sure that Thermodo delivers accurate and consistent temperature readings. Unfortunately this precision also means that the Thermodo
-sensor is easily affected by heat from your device (your iPhone / iPad / Macbook) or just the palm of your hand. To get the most accurate readings we recommend using an extension cord. For more 
+sensor is easily affected by heat from your device (your iPhone / iPad / Macbook) or just the palm of your hand. To get the most accurate readings we recommend using an extension cord. For more
 information [this video update from the Kickstarter project](http://vimeo.com/76458958).
 
 ## Contributing
