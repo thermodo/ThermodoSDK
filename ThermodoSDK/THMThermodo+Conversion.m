@@ -9,7 +9,7 @@
 
 @implementation THMThermodo (Conversion)
 
-- (CGFloat)converTemperature:(CGFloat)temperature toUnit:(THMThermodoTemperature)unit {
+- (CGFloat)convertTemperature:(CGFloat)temperature toUnit:(THMThermodoTemperature)unit {
     CGFloat convertedTemperature;
     
     switch (unit) {
