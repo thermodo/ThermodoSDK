@@ -22,7 +22,7 @@ pod "ThermodoSDK", "~> 1.0"
 
 We highly encourage you to use CocoaPods for installation so you're always up to date with the latest version. If you don't want to use CocoaPods you can of course still install ThermodoSDK manually.
 
-1. Download the lastest [zipped version](https://github.com/robocat/ThermodoSDK/archive/master.zip)
+1. Download the lastest [version](https://github.com/thermodo/ThermodoSDK-iOS)
 2. Drag all the ``.h`` and ``.a`` files into your Xcode project.
 3. Make sure that the location where you put the libThermodoSDK.a is in your "Library Search Path" (Under your targets build settings).
 4. Add ``-lThermodoSDK`` to "Other Linker Flags" in your targets build settings.
@@ -108,4 +108,4 @@ sensor is easily affected by heat from your device (your iPhone / iPad / Macbook
 
 ## Contributing
 
-We love our community and our fellow developers. If you find some way to improve ThermodoSDK or find a bug somewhere please let us know by [opening issue](https://github.com/robocat/ThermodoSDK/issues/new).
+We love our community and our fellow developers. If you find some way to improve ThermodoSDK or find a bug somewhere please let us know by [opening issue](https://github.com/thermodo/ThermodoSDK-iOS/issues/new).
