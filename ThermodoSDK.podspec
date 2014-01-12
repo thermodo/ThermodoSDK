@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.preserve_paths		  = 'ThermodoSDK/*.a'
   s.library             = 'ThermodoSDK'
   s.xcconfig            =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/ThermodoSDK/ThermodoSDK"' }
-  s.frameworks          = [ 'AVFoundation', 'AudioUnit', 'AudioToolbox' ]
+  s.frameworks          = [ 'AVFoundation', 'AudioToolbox', 'CoreAudio' ]
   s.requires_arc        = true
   s.public_header_files = [ 'ThermodoSDK/*.h' ]
 end
