@@ -39,7 +39,7 @@
  * @param thermodo The shared THMThermodo instance
  * @param temperature The measured temperature in celcius
  */
-- (void)thermodo:(THMThermodo *)thermodo didGetTemperature:(CGFloat)temperature;
+- (void)thermodo:(THMThermodo *)thermodo didGetTemperature:(float)temperature;
 
 @end
 
