@@ -18,5 +18,4 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'ThermodoSDK/ThermodoSDK.framework'
   s.frameworks          = [ 'AVFoundation', 'AudioToolbox', 'CoreAudio' ]
   s.requires_arc        = true
-  s.public_header_files = [ 'ThermodoSDK/*.h' ]
 end
