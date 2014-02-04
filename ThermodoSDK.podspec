@@ -15,7 +15,10 @@ Pod::Spec.new do |s|
   s.author              = { "Robocat" => "hello@robocatapps.com" }
   s.source              = { :git => "https://github.com/thermodo/ThermodoSDK-iOS.git", :tag => '1.0.4' }
   s.platform            = :ios, '6.0'
+  s.source_files        = 'ThermodoSDK/ThermodoSDK.framework/Versions/A/Headers/THMThermodo.h'
   s.vendored_frameworks = 'ThermodoSDK/ThermodoSDK.framework'
+  s.preserve_paths      = 'ThermodoSDK/ThermodoSDK.framework/*'
+  s.xcconfig            = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/ThermodoSDK"' }
   s.frameworks          = [ 'AVFoundation', 'AudioToolbox', 'CoreAudio' ]
   s.requires_arc        = true
 end
