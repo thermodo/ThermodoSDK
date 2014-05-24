@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://developer.thermodo.com/"><img src="http://thermodo.com/assets/images/logo-black.png" alt="Thermodo" title="Thermodo" /></a>
+  <a href="http://developer.thermodo.com/"><img src="https://raw.githubusercontent.com/thermodo/ThermodoSDK-iOS/master/thermodo-logo.png" alt="Thermodo" title="Thermodo" /></a>
 </p>
 
 The ThermodoSDK allows you to integrate [Thermodo](http://thermodo.com) into your iOS application. ThermodoSDK provides a simple interface for interacting with Thermodo and getting temperature readings into your application.
