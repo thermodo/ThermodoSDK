@@ -55,7 +55,7 @@ To get started you need to register a delegate so your application can ``start``
  * This method is called when an input was detected.
  * @param thermodo The shared THMThermodo instance
  */
-- (void)thermodoDidDetectInput:(THMThermodo *)thermodo;
+- (void)thermodoInputPluggedIn:(THMThermodo *)thermodo;
 
 /**
  * This method is called when an input was unplugged.
@@ -126,8 +126,38 @@ In this example we simply use our View Controller as the delegate for Thermodo. 
 ## Detection
 
 You can enable detection by setting ``detectionEnabled`` to true. Please note that detection is not currently supported in the OS X framework.
+
 Due to the way detection works there are scenarios where a Thermodo may not be detected. This may occur if the user uses certain extension cables. Therefore we suggest that if you enable detection you should also give the usre the option to disable the detection.
 While the detection does not cover all scenarios we strongly suggest that you enable it in your app. Otherwise your users may be confronted with a high pitch noise if they open your app with earpods plugged in.
+
+When detection is enabled you probably want to implement the following three delegate methods in addition to ``thermodoDidStartMeasuring:``, ``thermodoDidStopMeasuring:`` and ``thermodo:didGetTemperature:``.
+
+```objectivec
+/**
+ * This method is called when an input was detected.
+ * @param thermodo The shared THMThermodo instance
+ */
+- (void)thermodoInputPluggedIn:(THMThermodo *)thermodo;
+
+/**
+ * This method is called when an input was unplugged.
+ * @param thermodo The shared THMThermodo instance
+ */
+- (void)thermodoInputWasUnplugged:(THMThermodo *)thermodo;
+
+/**
+ * This method is called when the input was rejected as not being a Thermodo.
+ * @param thermodo The shared THMThermodo instance
+ */
+- (void)thermodoDidRejectInput:(THMThermodo *)thermodo NS_AVAILABLE_IOS(6_0);
+
+@end
+```
+
+``thermodoInplutPluggedIn:`` will inform you that some hardware was plugged into the audio port. At this point it is uncertain if the input is a Thermodo or earpods.
+If the input is found not to be a Thermodo, the ``thermodoDidRejectInput:`` method will be called.
+However, if a measurement starts and ``thermodoDidStartMeasuring:`` is called, the input is a Thermodo.
+The ``thermodoInputWasUnplugged:`` method will be called when the hardware in the audio port is unplugged regardless of it being a Thermodo or not.
 
 ## OS X Beta
 
