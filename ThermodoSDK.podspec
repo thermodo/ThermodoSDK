@@ -17,14 +17,14 @@ Pod::Spec.new do |s|
   s.source              = { :git => 'https://github.com/thermodo/ThermodoSDK.git', :tag => '1.1' }
   s.ios.platform        = :ios, '6.0'
   s.osx.platform        = :osx, '10.9'
-  s.ios.source_files        = 'ThermodoSDK/ThermodoSDK.framework/Versions/A/Headers/*.h'
-  s.osx.source_files        = 'ThermodoSDK/ThermodoSDKMac.framework/Versions/A/Headers/*.h'
-  s.ios.vendored_frameworks = 'ThermodoSDK/ThermodoSDK.framework'
-  s.osx.vendored_frameworks = 'ThermodoSDK/ThermodoSDKMac.framework'
+  s.ios.source_files        = 'Frameworks/ThermodoSDK.framework/Versions/A/Headers/*.h'
+  s.osx.source_files        = 'Frameworks/ThermodoSDKMac.framework/Versions/A/Headers/*.h'
+  s.ios.vendored_frameworks = 'Frameworks/ThermodoSDK.framework'
+  s.osx.vendored_frameworks = 'Frameworks/ThermodoSDKMac.framework'
   s.ios.frameworks      = [ 'AVFoundation', 'CoreAudio', 'AudioToolbox', 'MediaPlayer' ]
   s.osx.frameworks      = [ 'AVFoundation', 'CoreAudio', 'AudioToolbox', 'AudioUnit' ]
-  s.ios.preserve_paths  =  'ThermodoSDK/ThermodoSDK.framework/*'
-  s.osx.preserve_paths  =  'ThermodoSDK/ThermodoSDKMac.framework/*'
+  s.ios.preserve_paths  =  'Frameworks/ThermodoSDK.framework/*'
+  s.osx.preserve_paths  =  'Frameworks/ThermodoSDKMac.framework/*'
   s.xcconfig            = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/ThermodoSDK"' }
   s.requires_arc        = true
   s.prepare_command     = 'ruby copy_files_phase.rb'
