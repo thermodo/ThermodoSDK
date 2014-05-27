@@ -3,7 +3,7 @@ require 'xcodeproj'
 BUILD_PHASE_FRAMEWORKS_SUBFOLDER = "10"
 BUILD_PHASE_NAME = "Copy Thermodo SDK"
 FRAMEWORK_NAME = "ThermodoSDKMac.framework"
-FRAMEWORK_PATH = "Pods/ThermodoSDK/ThermodoSDK/#{FRAMEWORK_NAME}"
+FRAMEWORK_PATH = "Pods/ThermodoSDK/Frameworks/#{FRAMEWORK_NAME}"
 
 Dir.glob("../../*.xcodeproj").each do |project_file|
   project = Xcodeproj::Project.open(project_file)
