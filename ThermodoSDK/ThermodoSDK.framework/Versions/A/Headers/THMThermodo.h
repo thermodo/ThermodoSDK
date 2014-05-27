@@ -6,6 +6,7 @@
 //  All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import "THMError.h"
 
 @class THMThermodo;
 
@@ -19,6 +20,24 @@
  * @param thermodo The shared THMThermodo instance
  */
 - (BOOL)thermodoShouldUseAudioInputAsThermodoDevice:(THMThermodo *)thermodo;
+
+/**
+ * This method is called when an input was detected.
+ * @param thermodo The shared THMThermodo instance
+ */
+- (void)thermodoInputPluggedIn:(THMThermodo *)thermodo;
+
+/**
+ * This method is called when an input was unplugged.
+ * @param thermodo The shared THMThermodo instance
+ */
+- (void)thermodoInputWasUnplugged:(THMThermodo *)thermodo;
+
+/**
+ * This method is called when the input was rejected as not being a Thermodo.
+ * @param thermodo The shared THMThermodo instance
+ */
+- (void)thermodoDidRejectInput:(THMThermodo *)thermodo NS_AVAILABLE_IOS(6_0);
 
 /*!
  * This method will be called when -start is called on TMThermodo while the device is plugged in
@@ -39,6 +58,13 @@
  * @param temperature The measured temperature in celcius
  */
 - (void)thermodo:(THMThermodo *)thermodo didGetTemperature:(float)temperature;
+
+/*!
+ * This method will be called when a failure occurs.
+ * @param thermodo The shared THMThermodo instance
+ * @param error The error describing why the failure occurred.
+ */
+- (void)thermodo:(THMThermodo *)thermodo didFailWithError:(NSError *)error NS_AVAILABLE_IOS(6_0);
 
 @end
 
@@ -61,6 +87,30 @@
  * The delegate of the THMThermodo instance. You mus set this to get temperature callbacks.
  */
 @property (weak, nonatomic) id<THMThermodoDelegate> delegate;
+
+/*!
+ * The SDK will try to figure out if what is being plugged into the audio port is in fact a Thermodo.
+ * Some users may experience issues with this and therefore we suggest to provide a setting
+ * to the user that allows them to enable or disable this detection.
+ */
+@property (assign, nonatomic, getter = isDetectionEnabled) BOOL detectionEnabled;
+
+/*!
+ * If detection is enabled, this will be true when something is plugged into the audio port
+ * and the SDK is currently detecting whether or no the input is a Thermodo.
+ */
+@property (assign, nonatomic, readonly, getter = isDetectingThermodo) BOOL detectingThermodo;
+
+/*!
+ * Whether or not a Thermodo is currently detected. This is true if something is plugged into the audio port
+ * and it is determined to be a Thermodo or something is plugged in and detection is disabled.
+ */
+@property (assign, nonatomic, readonly, getter = isThermodoDetected) BOOL thermodoDetected;
+
+/*!
+ * True when something is plugged into the audio port.
+ */
+@property (assign, nonatomic, readonly, getter = isInputDetected) BOOL inputDetected;
 
 /*!
  * The current status of the device
