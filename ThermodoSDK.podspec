@@ -1,7 +1,7 @@
 # coding: utf-8
 Pod::Spec.new do |s|
   s.name                = 'ThermodoSDK'
-  s.version             = '1.1'
+  s.version             = '1.1.1'
   s.summary             = 'ThermodoSDK provides a simple interface for interacting with Thermodo.'
   s.homepage            = 'http://developer.thermodo.com'
   s.license      = {
