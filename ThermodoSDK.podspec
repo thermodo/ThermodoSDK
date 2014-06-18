@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     LICENSE
   }
   s.author              = { 'Robocat' => 'hello@robocatapps.com' }
-  s.source              = { :git => 'https://github.com/thermodo/ThermodoSDK.git', :tag => '1.1' }
+  s.source              = { :git => 'https://github.com/thermodo/ThermodoSDK.git', :tag => '1.1.1' }
   s.ios.platform        = :ios, '6.0'
   s.osx.platform        = :osx, '10.9'
   s.ios.source_files        = 'Frameworks/ThermodoSDK.framework/Versions/A/Headers/*.h'
