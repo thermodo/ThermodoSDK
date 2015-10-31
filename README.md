@@ -127,7 +127,7 @@ In this example we simply use our View Controller as the delegate for Thermodo. 
 
 You can enable detection by setting ``detectionEnabled`` to true. **Please note that detection is not currently supported in the OS X framework.**
 
-Due to the way detection works there are scenarios where a Thermodo may not be detected. This may occur if the user uses certain extension cables. Therefore we suggest that if you enable detection you should also give the usre the option to disable the detection.
+Due to the way detection works there are scenarios where a Thermodo may not be detected. This may occur if the user uses certain extension cables. Therefore we suggest that if you enable detection you should also give the user the option to disable the detection.
 While the detection does not cover all scenarios we strongly suggest that you enable it in your app. Otherwise your users may be confronted with a high pitch noise if they open your app with earpods plugged in.
 
 When detection is enabled you probably want to implement the following three delegate methods in addition to ``thermodoDidStartMeasuring:``, ``thermodoDidStopMeasuring:`` and ``thermodo:didGetTemperature:``.
